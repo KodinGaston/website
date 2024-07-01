@@ -1,0 +1,245 @@
+
+#nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(253, 237, 3);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 1000;
+  
+}
+
+#nav a {
+  color: rgb(103, 37, 174);
+  margin: 0 15px;
+  transition: all 0.5s ease; /*agrego esto para cambios suaves*/
+  font-size: 1.2em;
+}
+#nav a:hover {
+  color: purple; /*Cambiara el color a Naranja al pasar el mouse*/
+  transform: scale(1.2); /*Aumentara el tamano del texto*/
+  text-shadow: 2px 2px 4px #000000; /*Agrega sombra negra al texto*/
+}
+
+#hero {
+
+ width: 100%;
+ height: 90vh;
+ overflow: hidden;
+ position: relative;
+}
+
+#hero img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+body {
+  font-family: 'Bookman Old Style', serif;
+  margin:      0;
+  background-color: #876801;
+  color:       #f1c73c;
+  background-image: url('background.png'); /* body background */
+  
+    
+    background-repeat: repeat-y; /* Repeat the image vertically */
+    background-attachment: fixed; /* Keep the image in place while scrolling */
+    background-size: cover; /* Ensure the image covers the entire area*/            
+    }
+
+.row {
+
+  display: flex;  
+  gap:20px;
+  justify-content: space-between;
+  margin: 10px;
+  
+}
+
+.left-column{
+  flex: 1; 
+  padding: 10px;
+  border: 5px double paleturquoise;
+
+    
+}
+.right-column {
+  flex: 1; 
+  padding: 10px;
+  border: 5px solid purple;
+ 
+}
+
+.right-column img {
+  max-height: 400px;
+  max-width:  400px;
+  margin-bottom: 20px;
+  
+}
+
+
+
+#header {
+  background-color: rgb(0, 0, 0);
+  color: #f4bb00;
+  padding: 10px;
+  text-align: center;
+  
+}
+
+.h1 {
+  margin-top:50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:yellow;
+  font-size: 35px;
+  
+}
+
+.h2 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow',Arial, sans-serif;
+  color: rgb(162, 0, 255);
+  text-align: center;
+  font-size: 25px;
+}
+
+p {
+
+  font-family:Arial, Helvetica, sans-serif;
+  color:yellow;
+  font-size: 20px;
+
+}
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #060606;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;            
+  height: 400px;
+}
+.slider {
+  display: flex;
+  animation: slide 20s linear infinite;
+  width: fit-content;
+  height: 100%;
+}
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-200%);
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 2.5rem;
+  color: rgb(162, 0, 255);
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.project-card h2 {
+  color: rgb(162, 0, 255);
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.project-card p {
+  color: whitesmoke;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(162, 0, 255);
+  color: whitesmoke;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: mediumseagreen;
+}
+
+
+#color-display {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#color-text {
+  color: mediumseagreen;
+  font-size: 2em;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 360px) {
+
+  #hero {
+    font-size: 100%;
+    
+  }
+
+  .slider-container {
+    height: 400px;
+  }
+
+  header h1, header h2 {
+    font-size: 1.2em;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  footer {
+
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    background-color: black; 
+    color: rgb(232, 0, 232); 
+    text-align: center; 
+    padding: 20px;
+    
+  }
+}
+
