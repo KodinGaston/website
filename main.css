@@ -211,11 +211,18 @@ footer {
   background-color: black;
   color: rgb(232, 0, 232);
   text-align: center;
+  font-size: 15px;
   
 }
 
 /* Media Queries */
 @media (max-width: 300px) {
+
+  nav {
+    padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+    margin: 0 10px; /* Añade margen para evitar que toque los bordes */
+  }
+  
   .row {
     flex-direction: column;
     align-items: center;
@@ -226,8 +233,18 @@ footer {
     min-width: 100%; /* Para que las columnas ocupen todo el ancho disponible en pantallas pequeñas */
   }
 
+  h1.special {
+    font-size: 0.5rem; /* Ajusta el tamaño de fuente solo del h1 con la clase especial */
+    line-height: 1rem; /* Asegura una buena legibilidad */
+  }
+
+  h2 {
+    font-size: 0.75rem; /* Ajusta también los h2 si es necesario */
+  }
+
   #hero {
     font-size: 100%;
+    height: auto;
   }
 
   .slider-container {
@@ -246,6 +263,7 @@ footer {
     background-color: black;
     color: rgb(232, 0, 232);
     text-align: center;
+    font-size: 0.5rem;
     
   }
 }
