@@ -40,18 +40,23 @@ body {
 }
 
 #hero {
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-  position: relative;
+
+    width: 100%;
+    height: auto !important; /* Asegura que la altura se ajuste automáticamente en pantallas pequeñas */
+    object-fit: cover !important; /* Asegura que la imagen cubra el área del header sin deformarse */         
+    flex-direction: row;
+
 }
 
 #hero img {
+
   width: 100%;
   height: 100%;
   display: block;
   object-fit: contain;
   object-position: center;
+  margin-top: 38px;
+  
 }
 
 .row {
@@ -88,7 +93,7 @@ body {
   color: #f4bb00;
   padding: 10px;
   text-align: center;
-  height: 150px;
+  height: 100px;
   
 }
 
@@ -221,14 +226,16 @@ footer {
 }
 
 /* Media Queries */
-@media (max-width: 300px) {
+@media only screen and (max-width: 300px) {
 
   nav {
     padding: 10px; /* Ajusta el padding para pantallas pequeñas */
     margin: 0 10px; /* Añade margen para evitar que toque los bordes */
   }
 
-
+  #header {
+    height: auto;
+  }
 
   .row {
     flex-direction: column;
@@ -249,10 +256,12 @@ footer {
     font-size: 1.5rem; /* Ajusta también los h2 si es necesario */
   }
 
-  #hero {
-    font-size: 100%;
-    height: auto;
+  #hero {width: 100%;
+        height: auto !important; /* Asegura que la altura se ajuste automáticamente en pantallas pequeñas */
+        object-fit: cover !important; /* Asegura que la imagen cubra el área del header sin deformarse */         
+        flex-direction: row;
   }
+ 
 
   .slider-container {
     height: 300px;
