@@ -227,14 +227,21 @@ section {
     padding: 15px;
   }
 
+  .h1 {
+    font-size: 28px; /* Ajusta el tamaño del h1 para pantallas más pequeñas */
+  }
+
+  .h2 {
+    font-size: 20px; /* Ajusta el tamaño del h2 para pantallas más pequeñas */
+  }
+
   footer {
-    padding: 5px;
+    padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: black;
     color: rgb(232, 0, 232);
     text-align: center;
-    padding: 20px;
   }
 }
