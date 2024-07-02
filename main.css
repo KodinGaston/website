@@ -235,12 +235,12 @@ footer {
   }
 
   .h1 {
-    font-size: 0.5rem; /* Ajusta el tamaño de fuente solo del h1 con la clase especial */
-    line-height: 1rem; /* Asegura una buena legibilidad */
+    font-size: 1.8rem; /* Ajusta el tamaño de fuente solo del h1 con la clase especial */
+    line-height: 1.2rem; /* Asegura una buena legibilidad */
   }
 
   .h2 {
-    font-size: 0.75rem; /* Ajusta también los h2 si es necesario */
+    font-size: 1.2rem; /* Ajusta también los h2 si es necesario */
   }
 
   #hero {
