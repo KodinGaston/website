@@ -94,7 +94,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: yellow;
   font-size: 30px;
-  padding: 10px;
+  
 }
 
 .h2 {
@@ -234,12 +234,12 @@ footer {
     min-width: 100%; /* Para que las columnas ocupen todo el ancho disponible en pantallas pequeñas */
   }
 
-  h1.special {
+  .h1 {
     font-size: 0.5rem; /* Ajusta el tamaño de fuente solo del h1 con la clase especial */
     line-height: 1rem; /* Asegura una buena legibilidad */
   }
 
-  h2 {
+  .h2 {
     font-size: 0.75rem; /* Ajusta también los h2 si es necesario */
   }
 
