@@ -6,6 +6,7 @@
 body {
   font-family: 'Bookman Old Style', serif;
   margin: 0;
+  padding: 0;
   background-color: #876801;
   color: #f1c73c;
   background-image: url('background.png'); /* body background */
@@ -30,7 +31,7 @@ body {
   color: rgb(103, 37, 174);
   margin: 0 15px;
   transition: all 0.5s ease; /*agrego esto para cambios suaves*/
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 #nav a:hover {
   color: purple; /*Cambiara el color a Naranja al pasar el mouse*/
@@ -87,14 +88,16 @@ body {
   color: #f4bb00;
   padding: 10px;
   text-align: center;
+  height: 150px;
+  
 }
 
 .h1 {
-  margin-top: 20px;
+  margin-top: 0px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: yellow;
-  font-size: 30px;
-  
+  font-size: 25px;
+  padding: 10px;
 }
 
 .h2 {
@@ -102,9 +105,10 @@ body {
   color: rgb(162, 0, 255);
   text-align: center;
   font-size: 20px;
+ 
 }
 
-p {
+.p {
   font-family: Arial, Helvetica, sans-serif;
   color: yellow;
   font-size: 20px;
@@ -224,6 +228,8 @@ footer {
     margin: 0 10px; /* Añade margen para evitar que toque los bordes */
   }
 
+
+
   .row {
     flex-direction: column;
     align-items: center;
@@ -235,12 +241,12 @@ footer {
   }
 
   .h1 {
-    font-size: 1.8rem; /* Ajusta el tamaño de fuente solo del h1 con la clase especial */
+    font-size: 1.5rem; /* Ajusta el tamaño de fuente solo del h1 con la clase especial */
     line-height: 1.2rem; /* Asegura una buena legibilidad */
   }
 
   .h2 {
-    font-size: 1.2rem; /* Ajusta también los h2 si es necesario */
+    font-size: 1.5rem; /* Ajusta también los h2 si es necesario */
   }
 
   #hero {
