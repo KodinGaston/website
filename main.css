@@ -1,3 +1,18 @@
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bookman Old Style', serif;
+  margin: 0;
+  background-color: #876801;
+  color: #f1c73c;
+  background-image: url('background.png'); /* body background */
+  background-repeat: repeat-y; /* Repeat the image vertically */
+  background-attachment: fixed; /* Keep the image in place while scrolling */
+  background-size: cover; /* Ensure the image covers the entire area */
+}
 
 #nav {
   display: flex;
@@ -9,7 +24,6 @@
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   z-index: 1000;
-  
 }
 
 #nav a {
@@ -25,11 +39,10 @@
 }
 
 #hero {
-
- width: 100%;
- height: 90vh;
- overflow: hidden;
- position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
 }
 
 #hero img {
@@ -40,81 +53,62 @@
   object-position: center;
 }
 
-body {
-  font-family: 'Bookman Old Style', serif;
-  margin:      0;
-  background-color: #876801;
-  color:       #f1c73c;
-  background-image: url('background.png'); /* body background */
-  
-    
-    background-repeat: repeat-y; /* Repeat the image vertically */
-    background-attachment: fixed; /* Keep the image in place while scrolling */
-    background-size: cover; /* Ensure the image covers the entire area*/            
-    }
-
 .row {
-
-  display: flex;  
-  gap:20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-between;
   margin: 10px;
-  
 }
 
-.left-column{
-  flex: 1; 
-  padding: 10px;
-  border: 5px double paleturquoise;
-
-    
-}
+.left-column,
 .right-column {
-  flex: 1; 
+  flex: 1;
   padding: 10px;
+  min-width: 300px; /* Para asegurar que las columnas no sean demasiado pequeñas */
+}
+
+.left-column {
+  border: 5px double paleturquoise;
+}
+
+.right-column {
   border: 5px solid purple;
- 
 }
 
 .right-column img {
   max-height: 400px;
-  max-width:  400px;
+  max-width: 100%;
   margin-bottom: 20px;
-  
 }
-
-
 
 #header {
   background-color: rgb(0, 0, 0);
   color: #f4bb00;
   padding: 10px;
   text-align: center;
-  
 }
 
 .h1 {
-  margin-top:50px;
+  margin-top: 50px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color:yellow;
+  color: yellow;
   font-size: 35px;
-  
 }
 
 .h2 {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow',Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(162, 0, 255);
   text-align: center;
   font-size: 25px;
 }
 
 p {
-
-  font-family:Arial, Helvetica, sans-serif;
-  color:yellow;
+  font-family: Arial, Helvetica, sans-serif;
+  color: yellow;
   font-size: 20px;
-
 }
+
 section {
   max-width: 800px;
   margin: 20px auto;
@@ -122,18 +116,21 @@ section {
   background-color: #060606;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .slider-container {
   position: relative;
   overflow: hidden;
-  width: 100%;            
+  width: 100%;
   height: 400px;
 }
+
 .slider {
   display: flex;
   animation: slide 20s linear infinite;
   width: fit-content;
   height: 100%;
 }
+
 .slider img {
   width: 100%;
   height: auto;
@@ -142,10 +139,10 @@ section {
 
 @keyframes slide {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-200%);
+    transform: translateX(-200%);
   }
 }
 
@@ -193,7 +190,6 @@ section {
   background-color: mediumseagreen;
 }
 
-
 #color-display {
   width: 100%;
   height: 200px;
@@ -207,22 +203,24 @@ section {
   font-size: 2em;
 }
 
-
 /* Media Queries */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
 
-@media (min-width: 360px) {
+  .left-column,
+  .right-column {
+    min-width: 100%; /* Para que las columnas ocupen todo el ancho disponible en pantallas pequeñas */
+  }
 
   #hero {
     font-size: 100%;
-    
   }
 
   .slider-container {
-    height: 400px;
-  }
-
-  header h1, header h2 {
-    font-size: 1.2em;
+    height: 300px;
   }
 
   section {
@@ -230,16 +228,13 @@ section {
   }
 
   footer {
-
     padding: 5px;
     position: fixed;
     bottom: 0;
-    width: 100%; 
-    background-color: black; 
-    color: rgb(232, 0, 232); 
-    text-align: center; 
+    width: 100%;
+    background-color: black;
+    color: rgb(232, 0, 232);
+    text-align: center;
     padding: 20px;
-    
   }
 }
-
