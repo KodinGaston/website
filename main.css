@@ -94,6 +94,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: yellow;
   font-size: 30px;
+  padding: 10px;
 }
 
 .h2 {
@@ -222,7 +223,7 @@ footer {
     padding: 10px; /* Ajusta el padding para pantallas pequeñas */
     margin: 0 10px; /* Añade margen para evitar que toque los bordes */
   }
-  
+
   .row {
     flex-direction: column;
     align-items: center;
