@@ -32,7 +32,6 @@ body {
   transition: all 0.5s ease; /*agrego esto para cambios suaves*/
   font-size: 1.2em;
 }
-
 #nav a:hover {
   color: purple; /*Cambiara el color a Naranja al pasar el mouse*/
   transform: scale(1.2); /*Aumentara el tamano del texto*/
@@ -41,18 +40,17 @@ body {
 
 #hero {
   width: 100%;
-  height: calc(100vh - 60px); /* Ajusta la altura para que cubra todo el viewport menos el nav */
+  height: 90vh;
   overflow: hidden;
   position: relative;
-  margin-top: 60px; /* Asegura que el hero esté debajo del nav */
 }
 
 #hero img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover; /* Asegura que la imagen cubra toda la altura */
-  object-position: top; /* Alinea la imagen en la parte superior */
+  object-fit: contain;
+  object-position: center;
 }
 
 .row {
@@ -92,17 +90,17 @@ body {
 }
 
 .h1 {
-  margin-top: 50px;
+  margin-top: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: yellow;
-  font-size: 2em; /* Ajusta el tamaño del h1 */
+  font-size: 35px;
 }
 
 .h2 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(162, 0, 255);
   text-align: center;
-  font-size: 1.5em; /* Ajusta el tamaño del h2 */
+  font-size: 20px;
 }
 
 p {
@@ -205,20 +203,31 @@ section {
   font-size: 2em;
 }
 
+footer {
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: rgb(232, 0, 232);
+  text-align: center;
+  padding: 20px;
+}
+
 /* Media Queries */
 @media (max-width: 300px) {
   .row {
-    flex-direction: column; /* Mantiene las columnas en una fila en pantallas pequeñas */
+    flex-direction: column;
+    align-items: center;
   }
 
   .left-column,
   .right-column {
-    flex: 1; /* Asegura que cada columna ocupe el 100% del ancho */
-    box-sizing: border-box;
+    min-width: 100%; /* Para que las columnas ocupen todo el ancho disponible en pantallas pequeñas */
   }
 
   #hero {
-    height: calc(70vh - 60px); /* Ajuste para pantallas más pequeñas, teniendo en cuenta el nav */
+    font-size: 100%;
   }
 
   .slider-container {
@@ -229,21 +238,14 @@ section {
     padding: 15px;
   }
 
-  .h1 {
-    font-size: 0.5em; /* Ajuste adicional del tamaño del h1 */
-  }
-
-  .h2 {
-    font-size: 0.5em; /* Ajuste adicional del tamaño del h2 */
-  }
-
   footer {
-    padding: 10px;
+    padding: 5px;
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: black;
     color: rgb(232, 0, 232);
     text-align: center;
+    padding: 20px;
   }
 }
