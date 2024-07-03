@@ -1,0 +1,339 @@
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+
+  font-size: 16px;
+  font-family: 'Bookman Old Style', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #876801;
+  color: #f1c73c;
+  overflow-x: hidden;
+  background-image: url('background.png'); /* body background */
+  background-repeat: repeat-y; /* Repeat the image vertically */
+  background-attachment: fixed; /* Keep the image in place while scrolling */
+  background-size: cover; /* Ensure the image covers the entire area */
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(253, 237, 3);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 1000;
+}
+
+#nav a {
+  color: rgb(103, 37, 174);
+  margin: 0 15px;
+  transition: all 0.5s ease; /*agrego esto para cambios suaves*/
+  font-size: 0.8em;
+}
+#nav a:hover {
+  color: purple; /*Cambiara el color a Naranja al pasar el mouse*/
+  transform: scale(1.2); /*Aumentara el tamano del texto*/
+  text-shadow: 2px 2px 4px #000000; /*Agrega sombra negra al texto*/
+}
+
+.video-container {
+
+  position: relative;
+  width: 100%;
+  height: 95vh; /* Altura de la ventana menos la altura del nav */
+  overflow: hidden; /* Recorta el exceso del video */
+  margin: 0;
+  padding: 0;
+      
+}
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  object-fit: contain; /* Ajusta el video para que cubra el contenedor sin recortarse */
+            transform: translate(-50%, -50%);
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.content h1, .content h2 {
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .video-container {
+      height: 40vh; /* Ajusta la altura del video en pantallas más pequeñas */
+  }
+ 
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  padding: 10px;
+  min-width: 300px; /* Para asegurar que las columnas no sean demasiado pequeñas */
+}
+
+.left-column {
+  border: 5px double paleturquoise;
+}
+
+.right-column {
+  border: 5px solid purple;
+}
+
+.right-column img {
+  max-height: 400px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+#header {
+  background-color: rgb(0, 0, 0);
+  color: #f4bb00;
+  padding: 20px;
+  text-align: center;
+  height: auto;
+  margin-top: -40px; /*esto me ayuda a quitar espacio muerto c el video*/
+
+}
+
+.h1 {
+  margin-top: 0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: yellow;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(162, 0, 255);
+  text-align: center;
+  font-size: 20px;
+ 
+}
+
+.p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: yellow;
+  font-size: 15px;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #060606;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+}
+
+.slider {
+  display: flex;
+  animation: slide 20s linear infinite;
+  width: fit-content;
+  height: 100%;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.5rem;
+  color: rgb(162, 0, 255);
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.project-card h2 {
+  color: rgb(162, 0, 255);
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.project-card p {
+  color:  #3498db;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+ 
+#check-answer-button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#user-answer {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#answer-message p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(162, 0, 255);
+  color: whitesmoke;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: mediumseagreen;
+}
+
+#color-display {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#color-text {
+  color: mediumseagreen;
+  font-size: 2em;
+}
+
+footer {
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: rgb(232, 0, 232);
+  text-align: center;
+  font-size: 15px;
+  
+}
+
+/* Media Queries */
+@media only screen and (max-width: 300px) {  
+
+  nav {
+    padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+    margin: 0 10px; /* Añade margen para evitar que toque los bordes */
+  }
+  
+    .video-container {
+        height: 40vh; /* Ajusta la altura del video en pantallas más pequeñas */
+    }
+
+  #header {
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column,
+  .right-column {
+    min-width: 100%; /* Para que las columnas ocupen todo el ancho disponible en pantallas pequeñas */
+  }
+
+  .h1 {
+    font-size: 1.5rem; /* Ajusta el tamaño de fuente solo del h1 con la clase especial */
+    line-height: 1.2rem; /* Asegura una buena legibilidad */
+  }
+
+  .h2 {
+    font-size: 1.5rem; /* Ajusta también los h2 si es necesario */
+  }
+
+  .slider-container {
+    height: 300px;
+  }
+
+  section {
+    padding: 15px;
+  } 
+
+  footer {
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: rgb(232, 0, 232);
+    text-align: center;
+    font-size: 0.5rem;
+    
+  }
+}
+
+/* Media query para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+  .project-card {
+      width: calc(50% - 20px); /* 2 columnas en pantallas pequeñas */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .project-card {
+      width: 100%; /* 1 columna en pantallas móviles */
+  }
+}
