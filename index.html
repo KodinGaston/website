@@ -20,18 +20,19 @@
         <a href="#contact">Contact</a>
     </nav>
         
-    <div id="hero">
-        <img src="hero.jpg" alt="A person coding at office">
+    <div class="video-container">
+        <video src="short.video.mp4" autoplay loop muted playsinline></video>
     </div>
+    
+    <section>
+    <div id="home"> 
 
-    <section id="home">
-    <div> 
-    <header id="header">
-        <h1 class="h1">✨||KodinGaston||✨</h1>
+<header id="header">
+        <h1 class="h1">✨KodinGaston✨</h1>
         <h2 class="h2">👨‍💻►Frontend Developer◄👨‍💻</h2>         
-    </header>
+</header>
     </div>
-
+    
     <section id="slider" class="slider-container">
         
         <div class="slider">
@@ -66,9 +67,6 @@
           <h2 class="h2">About Me</h2>
 
         <p>Hello, to you! I'm a passionate frontend developer who thrives on helping businesses achieve their goals.</p>
-        <p>With a knack for problem-solving and a love for clean, efficient code, I take pride in creating digital experiences that are both intuitive and engaging.</p>
-        <p>I believe that the best work comes from a place of passion and dedication, and I bring that energy to every project I take on.</p>
-        <p>Whether I'm building a responsive website or optimizing an existing interface, my goal is always the same: to help businesses connect with their audience in meaningful ways.</p>
         <p>That is why It is imperative that you know that I am here to help you achieve your goals. In order to get that, I understand the unique challenges that both entrepreneurs and big companies face nowadays, and am committed to providing solutions that meet your specific needs.</p>     
         <p>Furthermore, whether I'm building a responsive website or optimizing an existing interface, my goal is always the same: to help businesses connect with their audience in meaningful ways. No matter Whether you're starting from scratch or looking to revamp an existing site.</p>
         <p>Collaboration is at the heart of my process and that is why I listen carefully to your ideas, provide insightful feedback, and work closely with you to ensure the final product exceeds your expectations.</p> 
@@ -95,13 +93,17 @@
             <a href="https://github.com/KodinGaston" target="_blank" class="button">View on GitHub</a>
         </div>
 
-        <!-- Game 1: Logic Game -->
+        <!-- Game 1: Math Quiz -->
         <div class="project-card">
-            <h2>Play this Logic Game</h2>
-            <p>Test your logic skills with this interactive game.</p>
-            <div id="logic-game"></div>
-            <button onclick="startLogicGame()">Start Game</button>
+            <h2>Math Quiz</h2>
+            <p>Test your math skills with this interactive quiz!</p>
+            <div id="question"></div>
+            <input type="text" id="user-answer" placeholder="Your answer...">
+            <button id="check-answer-button">Check Answer</button>
+            <div id="answer-message"></div>
         </div>
+
+        
                                 
         <!-- Game 2: Color Changer -->
         <div class="project-card">
@@ -117,9 +119,9 @@
         <div class="project-card">
             <h2>Fun Button</h2>
             <p>Click the button to see something fun happen!</p>
-            <button onclick="funButtonClick()">Click Me!</button>
-            <div id="fun-display"></div>
-        </div>
+            <p>You can click me more than once...</p>
+            <button onclick="funButtonClick()">Click me for a joke!</button>
+    <div id="fun-display"></div>
     </section>        
        
     <section id="contact">
