@@ -37,7 +37,7 @@ body, html {
   font-size: 0.8em;
 }
 #nav a:hover {
-  color: purple; /*Cambiara el color a Naranja al pasar el mouse*/
+  color: yellow; /*Cambiara el color a Naranja al pasar el mouse*/
   transform: scale(1.2); /*Aumentara el tamano del texto*/
   text-shadow: 2px 2px 4px #000000; /*Agrega sombra negra al texto*/
 }
@@ -111,19 +111,21 @@ body, html {
 #header {
   background-color: rgb(0, 0, 0);
   color: #f4bb00;
-  padding: 20px;
+  padding: 20;
   text-align: center;
   height: auto;
-  margin-top: -40px; /*esto me ayuda a quitar espacio muerto c el video*/
+  margin-top: 20px; /*esto me ayuda a quitar espacio muerto c el video*/
 
 }
 
 .h1 {
   margin-top: 0px;
+  margin-bottom: -20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: yellow;
-  font-size: 30px;
-  padding: 10px;
+  font-size: 25px;
+  padding: 40px;
+  text-align: center;
 }
 
 .h2 {
@@ -143,7 +145,7 @@ body, html {
 section {
   max-width: 800px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 10px;
   background-color: #060606;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -257,14 +259,14 @@ section {
 }
 
 footer {
-  padding: 15px;
+  padding: 12px;
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: black;
   color: rgb(232, 0, 232);
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   
 }
 
@@ -275,6 +277,11 @@ footer {
     padding: 10px; /* Ajusta el padding para pantallas pequeñas */
     margin: 0 10px; /* Añade margen para evitar que toque los bordes */
   }
+
+  nav a{
+    font-size: 0.3 rem;
+    padding: 0.8 rem;
+  }
   
     .video-container {
         height: 40vh; /* Ajusta la altura del video en pantallas más pequeñas */
@@ -282,7 +289,7 @@ footer {
 
   #header {
     height: auto;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   .row {
@@ -296,12 +303,12 @@ footer {
   }
 
   .h1 {
-    font-size: 1.5rem; /* Ajusta el tamaño de fuente solo del h1 con la clase especial */
-    line-height: 1.2rem; /* Asegura una buena legibilidad */
+    font-size: 1.2 rem; /* Ajusta el tamaño de fuente solo del h1 con la clase especial */
+    line-height: 1rem; /* Asegura una buena legibilidad */
   }
 
   .h2 {
-    font-size: 1.5rem; /* Ajusta también los h2 si es necesario */
+    font-size: 1.2rem; /* Ajusta también los h2 si es necesario */
   }
 
   .slider-container {
@@ -312,16 +319,22 @@ footer {
     padding: 15px;
   } 
 
+  #user-answer {
+    width: 70%;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
   footer {
-    padding: 15px;
+    font-size: 0.4rem;
+    padding: 0.3 rem;
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: black;
     color: rgb(232, 0, 232);
     text-align: center;
-    font-size: 0.5rem;
-    
+        
   }
 }
 
@@ -329,6 +342,12 @@ footer {
 @media only screen and (max-width: 768px) {
   .project-card {
       width: calc(50% - 20px); /* 2 columnas en pantallas pequeñas */
+  }
+  
+  #user-answer {
+    width: 70%;
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
